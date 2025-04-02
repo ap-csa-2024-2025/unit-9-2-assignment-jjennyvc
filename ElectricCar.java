@@ -3,6 +3,7 @@ public class ElectricCar extends Car {
 	// Note we're reinterpreting "fuelLevel" as "batteryLevel"
 	public ElectricCar(String model, int batteryLevel)
 	{
+		return super.FuelLevel() / 100.0;
 
 	}
 
@@ -22,7 +23,8 @@ public class ElectricCar extends Car {
 	// battery percentage left in the car
 	public double milesLeft(double milesOnFullCharge)
 	{
-		return 0.0;
+		return milesOnFullCharge * this.getFuelLevel();
+		
 	}
 
 
